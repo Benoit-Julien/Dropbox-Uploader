@@ -1531,7 +1531,8 @@ if [[ -e $CONFIG_FILE ]]; then
         remove_temp_files
         exit 1
     fi
-
+elif [[ $OAUTH_ACCESS_TOKEN != "" ]]; then
+    echo -ne "Take Access token form the environment.\n"
 #NEW SETUP...
 else
 
